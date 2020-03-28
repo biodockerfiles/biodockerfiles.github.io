@@ -1,0 +1,105 @@
+---
+---
+
+@import "rouge";
+
+body {
+  margin: 0rem;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  color: darkslategrey;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin: 3rem 0rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1.5rem 0rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 3rem 0rem 1rem 0rem;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.75rem;
+}
+
+a {
+  color: #2ECC71;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #27AE60;
+  text-decoration: underline;
+}
+
+h1 > a,
+h1 > a:hover {
+  color: #2ECC71;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0rem;
+}
+
+ul > li {
+  margin: 0.5rem 0rem;
+  list-style: none;
+  line-height: 1.75rem;
+  text-align: justify;
+}
+
+hr {
+  border: 0.1rem solid lightgrey;
+  margin: 3rem 0rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0rem auto;
+  padding: 0rem 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: lightslategrey;
+}
+
+.text-muted > a,
+.text-muted > a:hover {
+    color: lightslategrey;
+}
+
+.text-muted > a {
+    text-decoration: none;
+}
+
+.text-muted > a:hover {
+    text-decoration: underline;
+}
+
+.search {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.25rem;
+  border: 0.1rem solid lightgrey;
+  padding: 1.25rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.footer {
+    margin: 3rem 0rem;
+}

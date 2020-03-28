@@ -1,11 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  {% if site.analytics_id and jekyll.environment == "production" %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.analytics_id }}');
+  </script>
+  {% endif %}
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>biodockerfiles</title>
+  <title>{% if page.title %}{{ page.title | append: ' - ' }}{% endif %}biodockerfiles{% if page.tagline %}{{ page.tagline | prepend: ' - ' }}{% endif %}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png">
+  {% seo title=false %}
 </head>
 <body>
-  {{ content }}
+  <div class="container">
+    <h1 class="text-center">
+      <a href="/">
+        biodockerfiles
+      </a>
+    </h1>
+    {% if page.title %}
+      <h2>{{ page.title }}</h2>
+    {% endif %}
+    {% if page.is_dockerfile %}
+      <p>
+        <a href="#" id="download-button">Download</a>
+        &middot; <a href="https://github.com/biodockerfiles/biodockerfiles.github.io/blob/master/{{ page.path }}" target="_blank" title="Edit {{ page.title }} Dockerfile on GitHub" rel="noopener">Edit</a>
+        &middot; <a href="https://github.com/biodockerfiles/biodockerfiles.github.io/issues" target="_blank" title="Report {{ page.title }} Dockerfile on GitHub" rel="noopener">Report</a>
+        {% if page.website %}&middot; <a href="{{ page.website }}" target="_blank" rel="noopener">Website</a>{% endif %}
+      </p>
+    {% endif %}
+    {{ content }}
+    {% if page.is_dockerfile %}
+      <script>
+        let downloadButton = document.getElementById('download-button');
+        downloadButton.addEventListener('click', (e) => {
+          let code = document.querySelector('figure pre code');
+          let blob = new Blob(
+            [code.textContent || code.innerText || ''],
+            {type: 'text/plain;charset=utf-8'});
+          let url = window.URL.createObjectURL(blob);
+          downloadButton.href = url;
+          downloadButton.target = '_blank';
+          downloadButton.download = '{{ page.title }}.Dockerfile';
+        });
+      </script>
+    {% endif %}
+    <hr>
+    <p class="footer text-center text-muted">
+      <a href="/about/">About</a>
+      &middot; <a href="/docker-tips/">Docker Tips</a>
+      &middot; <a href="https://github.com/biodockerfiles/biodockerfiles.github.io" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </div>
 </body>
 </html>

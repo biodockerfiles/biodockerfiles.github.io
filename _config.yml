@@ -1,0 +1,34 @@
+url: "https://biodockerfiles.github.io"
+theme: null
+markdown: kramdown
+highlighter: rouge
+analytics_id: UA-48281803-19
+
+collections:
+  dockerfiles:
+    output: true
+    permalink: /:name/
+    sort_by: name
+  pages:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "dockerfiles"
+    values:
+      layout: default
+      is_dockerfile: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+sass:
+  sass_dir: _sass
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
