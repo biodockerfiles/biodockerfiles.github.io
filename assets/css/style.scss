@@ -8,6 +8,14 @@ body {
   font-size: 1.25rem;
   font-family: sans-serif;
   color: darkslategrey;
+  background-color: white;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    color: lightgrey;
+    background-color: black;
+  }
 }
 
 h1 {
