@@ -14,6 +14,7 @@
   {% endif %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msvalidate.01" content="E13A5DF83502BFE40932815727E300FD">
   <title>{% if page.title %}{{ page.title | append: ' - ' }}{% endif %}biodockerfiles{% if page.tagline %}{{ page.tagline | prepend: ' - ' }}{% endif %}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png">
@@ -33,7 +34,7 @@
       <p>
         <time datetime="{{ page.date | date_to_xmlschema }}" title="{{ page.date | date_to_rfc822 }}" class="text-muted">{{ page.date | date: '%B %d, %Y'}}</time>
         &middot; <a href="#" id="download-button">Download</a>
-        &middot; <a href="https://github.com/biodockerfiles/biodockerfiles.github.io/blob/master/{{ page.path }}" target="_blank" title="Edit {{ page.title }} Dockerfile on GitHub" rel="noopener">Edit</a>
+        &middot; <a href="https://github.com/biodockerfiles/biodockerfiles.github.io/edit/master/{{ page.path }}" target="_blank" title="Edit {{ page.title }} Dockerfile on GitHub" rel="noopener">Edit</a>
         &middot; <a href="https://github.com/biodockerfiles/biodockerfiles.github.io/issues" target="_blank" title="Report {{ page.title }} Dockerfile on GitHub" rel="noopener">Report</a>
         {% if page.website %}&middot; <a href="{{ page.website }}" target="_blank" rel="noopener">Website</a>{% endif %}
       </p>
@@ -44,7 +45,7 @@
     {{ content }}
     {% if page.is_page %}
       <p class="text-right">
-        <a href="https://github.com/biodockerfiles/biodockerfiles.github.io/blob/master/{{ page.path }}" target="_blank" title="Edit {{ page.title }} Dockerfile on GitHub" rel="noopener">Edit this page</a>
+        <a href="https://github.com/biodockerfiles/biodockerfiles.github.io/edit/master/{{ page.path }}" target="_blank" title="Edit {{ page.title }} Dockerfile on GitHub" rel="noopener">Edit this page</a>
       </p>
     {% endif %}
     {% if page.is_dockerfile %}
