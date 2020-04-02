@@ -2,7 +2,8 @@
 layout: null
 ---
 [
-  {% for dockerfile in site.dockerfiles %}
+  {% assign ordered_dockerfiles = site.dockerfiles | sort: "title" %}
+  {% for dockerfile in ordered_dockerfiles %}
     {
       "title" : "{{ dockerfile.title }}",
       "description" : "{{ dockerfile.excerpt | strip_html | strip | truncate: 80 }}",
