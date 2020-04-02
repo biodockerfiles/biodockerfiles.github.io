@@ -1,11 +1,12 @@
 ---
+layout: default
 title: verifybamid-1.1.3
+date: 2020-03-26 12:52 +0300
+excerpt: verifyBamID is a software that verifies whether the reads in particular file match previously known genotypes for an individual (or group of individuals), and checks whether the reads are contaminated as a mixture of two samples.
 website: https://genome.sph.umich.edu/wiki/VerifyBamID
 ---
 
-verifyBamID is a software that verifies whether the reads in particular file match previously known genotypes for an individual (or group of individuals), and checks whether the reads are contaminated as a mixture of two samples.
-
-{% highlight dockerfile %}
+```dockerfile
 FROM ubuntu:16.04
 
 RUN apt-get update \
@@ -30,4 +31,4 @@ RUN git checkout tags/v1.1.3 \
     && make \
     && cp /tmp/verifyBamID/bin/verifyBamID /usr/local/bin \
     && rm -rf /tmp/*
-{% endhighlight %}
+```

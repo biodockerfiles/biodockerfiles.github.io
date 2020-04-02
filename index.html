@@ -1,12 +1,14 @@
 ---
 layout: default
 tagline: 'Hosting Dockerfiles for bioinformatics'
+is_page: false
 ---
 
 <input class="search" type="text" id="search-input" placeholder="Search for a Dockerfile...">
 
 <ul id="results-container">
-  {% for dockerfile in site.dockerfiles %}
+  {% assign ordered_dockerfiles = site.dockerfiles | sort: "title" %}
+  {% for dockerfile in ordered_dockerfiles %}
     <li><a href="{{ dockerfile.url }}">{{ dockerfile.title }}</a>: {{ dockerfile.excerpt | strip_html | strip | truncate: 80 }}</li>
   {% endfor %}
 </ul>

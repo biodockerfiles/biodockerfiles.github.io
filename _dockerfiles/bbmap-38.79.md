@@ -1,11 +1,12 @@
 ---
+layout: default
 title: bbmap-38.79
+date: 2020-03-26 21:36 +0300
+excerpt: BBTools is a suite of fast, multithreaded bioinformatics tools designed for analysis of DNA and RNA sequence data.
 website: https://jgi.doe.gov/data-and-tools/bbtools/
 ---
 
-BBTools is a suite of fast, multithreaded bioinformatics tools designed for analysis of DNA and RNA sequence data.
-
-{% highlight dockerfile %}
+```dockerfile
 FROM ubuntu:18.06
 
 RUN apt-get update \
@@ -22,4 +23,4 @@ RUN wget https://sourceforge.net/projects/bbmap/files/BBMap_38.79.tar.gz/downloa
 
 # Make all BBMap executables global
 RUN ln -s /opt/bbmap/*.sh /usr/local/bin/
-{% endhighlight %}
+```

@@ -1,9 +1,10 @@
 ---
+layout: default
 title: survivor-1.0.7
+date: 2020-03-26 13:06 +0300
+excerpt: SURVIVOR is a tool set for simulating/evaluating SVs, merging and comparing SVs within and among samples, and includes various methods to reformat or summarize SVs.
 website: https://github.com/fritzsedlazeck/SURVIVOR
 ---
-
-SURVIVOR is a tool set for simulating/evaluating SVs, merging and comparing SVs within and among samples, and includes various methods to reformat or summarize SVs.
 
 {% highlight dockerfile %}
 FROM ubuntu:16.04

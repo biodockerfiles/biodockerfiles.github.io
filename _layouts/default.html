@@ -31,13 +31,22 @@
     {% endif %}
     {% if page.is_dockerfile %}
       <p>
-        <a href="#" id="download-button">Download</a>
+        <time datetime="{{ page.date | date_to_xmlschema }}" title="{{ page.date | date_to_rfc822 }}" class="text-muted">{{ page.date | date: '%B %d, %Y'}}</time>
+        &middot; <a href="#" id="download-button">Download</a>
         &middot; <a href="https://github.com/biodockerfiles/biodockerfiles.github.io/blob/master/{{ page.path }}" target="_blank" title="Edit {{ page.title }} Dockerfile on GitHub" rel="noopener">Edit</a>
         &middot; <a href="https://github.com/biodockerfiles/biodockerfiles.github.io/issues" target="_blank" title="Report {{ page.title }} Dockerfile on GitHub" rel="noopener">Report</a>
         {% if page.website %}&middot; <a href="{{ page.website }}" target="_blank" rel="noopener">Website</a>{% endif %}
       </p>
+      {% if page.excerpt %}
+        <p>{{ page.excerpt }}</p>
+      {% endif %}
     {% endif %}
     {{ content }}
+    {% if page.is_page %}
+      <p class="text-right">
+        <a href="https://github.com/biodockerfiles/biodockerfiles.github.io/blob/master/{{ page.path }}" target="_blank" title="Edit {{ page.title }} Dockerfile on GitHub" rel="noopener">Edit this page</a>
+      </p>
+    {% endif %}
     {% if page.is_dockerfile %}
       <script>
         let downloadButton = document.getElementById('download-button');
@@ -55,8 +64,9 @@
     {% endif %}
     <hr>
     <p class="footer text-center text-muted">
-      <a href="/about/">About</a>
+      <a href="/submit/">Submit</a>
       &middot; <a href="/docker-tips/">Docker Tips</a>
+      &middot; <a href="/about/">About</a>
       &middot; <a href="https://github.com/biodockerfiles/biodockerfiles.github.io" target="_blank" rel="noopener">GitHub</a>
     </p>
   </div>

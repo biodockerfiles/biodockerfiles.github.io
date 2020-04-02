@@ -1,7 +1,5 @@
 url: "https://biodockerfiles.github.io"
 theme: null
-markdown: kramdown
-highlighter: rouge
 analytics_id: UA-48281803-19
 
 collections:
@@ -18,17 +16,39 @@ defaults:
       path: ""
       type: "dockerfiles"
     values:
-      layout: default
       is_dockerfile: true
   - scope:
       path: ""
       type: "pages"
     values:
       layout: default
-
-sass:
-  sass_dir: _sass
+      is_page: true
 
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+sass:
+  sass_dir: _sass
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+jekyll_compose:
+  auto_open: false
+  default_front_matter:
+    dockerfiles:
+      layout: default
+      excerpt:
+      website:

@@ -1,11 +1,12 @@
 ---
+layout: default
 title: trim-galore-0.4.4
+date: 2020-03-26 12:46 +0300
+excerpt: Trim Galore! is a wrapper script to automate quality and adapter trimming as well as quality control, with some added functionality to remove biased methylation positions for RRBS sequence files (for directional, non-directional (or paired-end) sequencing).
 website: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
 ---
 
-Trim Galore! is a wrapper script to automate quality and adapter trimming as well as quality control, with some added functionality to remove biased methylation positions for RRBS sequence files (for directional, non-directional (or paired-end) sequencing).
-
-{% highlight dockerfile %}
+```dockerfile
 FROM ubuntu:14.04
 
 WORKDIR /opt
@@ -55,4 +56,4 @@ WORKDIR /opt
 
 # Make Trim Galore! executable global
 RUN ln -s /opt/trim_galore/trim_galore /usr/local/bin/trim_galore
-{% endhighlight %}
+```

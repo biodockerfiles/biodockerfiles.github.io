@@ -1,11 +1,12 @@
 ---
+layout: default
 title: bcftools-1.9
+date: 2020-03-26 12:59 +0300
+excerpt: BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF.
 website: https://www.htslib.org/doc/bcftools.html
 ---
 
-BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF.
-
-{% highlight dockerfile %}
+```dockerfile
 FROM ubuntu:16.04
 
 RUN apt-get update \
@@ -47,4 +48,4 @@ RUN autoheader \
 
 WORKDIR /opt
 ENV BCFTOOLS_PLUGINS /opt/bcftools-1.9/plugins
-{% endhighlight %}
+```

@@ -1,11 +1,12 @@
 ---
+layout: default
 title: samtools-1.10
+date: 2020-03-26 01:42 +0300
+excerpt: Samtools is a suite of programs for interacting with high-throughput sequencing data.
 website: https://www.htslib.org/doc/samtools.html
 ---
 
-Samtools is a suite of programs for interacting with high-throughput sequencing data.
-
-{% highlight dockerfile %}
+```dockerfile
 FROM ubuntu:18.04
 
 WORKDIR /opt
@@ -39,4 +40,4 @@ RUN autoheader \
     && ./configure \
     && make \
     && make install
-{% endhighlight %}
+```

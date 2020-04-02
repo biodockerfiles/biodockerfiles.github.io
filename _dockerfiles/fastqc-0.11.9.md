@@ -1,11 +1,12 @@
 ---
+layout: default
 title: fastqc-0.11.9
+date: 2020-03-26 16:30 +0300
+excerpt: FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines.
 website: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 ---
 
-FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines.
-
-{% highlight dockerfile %}
+```dockerfile
 FROM ubuntu:18.04
 
 WORKDIR /opt
@@ -32,4 +33,4 @@ RUN chmod +x /opt/FastQC/fastqc \
     && ln -s /opt/FastQC/fastqc /usr/local/bin/fastqc
 
 CMD ["/bin/bash"]
-{% endhighlight %}
+```

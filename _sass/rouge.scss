@@ -1,3 +1,46 @@
+@mixin unselectable() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+.lineno-container > figure > pre {
+  padding: 0.25rem;
+}
+
+.highlight {
+  pre.lineno {
+    border: none;
+    margin-right: 0.5rem;
+    text-align: right;
+    @include opacity(0.6);
+  }
+
+  .lineno {
+    @include unselectable();
+  }
+
+  .gutter {
+    margin: 0rem;
+  }
+
+  pre {
+    pre {
+      border: none;
+      margin-bottom: 0rem;
+    }
+  }
+}
+
 .highlight { margin: 0rem; border-radius: 0.25rem; }
 .highlight pre { margin: 0rem; }
 .highlight pre code { display: block; padding: 0.5rem; overflow-x: auto; }

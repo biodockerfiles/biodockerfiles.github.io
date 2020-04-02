@@ -1,11 +1,12 @@
 ---
+layout: default
 title: seqtk-1.2
+date: 2020-03-26 12:40 +0300
+excerpt: Seqtk is a fast and lightweight tool for processing sequences in the FASTA or FASTQ format.
 website: https://github.com/lh3/seqtk
 ---
 
-Seqtk is a fast and lightweight tool for processing sequences in the FASTA or FASTQ format.
-
-{% highlight dockerfile %}
+```dockerfile
 FROM ubuntu:14.04
 
 WORKDIR /opt/
@@ -25,4 +26,4 @@ RUN wget https://github.com/lh3/seqtk/archive/v1.2.zip \
 WORKDIR /opt/seqtk-1.2/
 RUN make \
     && n -s /opt/seqtk-1.2/seqtk /usr/local/bin/seqtk
-{% endhighlight %}
+```
