@@ -34,8 +34,8 @@ h3 {
 }
 
 p {
-    text-align: justify;
-    line-height: 1.75rem;
+  text-align: justify;
+  line-height: 1.75rem;
 }
 
 a {
@@ -90,7 +90,7 @@ hr {
 
 .text-muted > a,
 .text-muted > a:hover {
-    color: lightslategrey;
+  color: lightslategrey;
 }
 
 .text-muted > a {
@@ -98,7 +98,7 @@ hr {
 }
 
 .text-muted > a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .search {
@@ -110,8 +110,17 @@ hr {
   padding: 1.25rem;
   font-size: 1rem;
   box-sizing: border-box;
+  color: darkslategrey;
+  background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .search {
+    color: lightgrey;
+    background-color: #333333;
+  }
 }
 
 .footer {
-    margin: 3rem 0rem;
+  margin: 3rem 0rem;
 }

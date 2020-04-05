@@ -41,9 +41,18 @@
   }
 }
 
-.highlight { margin: 0rem; border-radius: 0.25rem; }
-.highlight pre { margin: 0rem; }
-.highlight pre code { display: block; padding: 0.5rem; overflow-x: auto; }
+.highlight pre {
+  display: block;
+  margin: 0rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight pre code {
+  display: block;
+  padding: 0.5rem;
+  overflow-x: auto;
+}
 .highlight .gh {
   color: #999999;
 }
@@ -211,10 +220,6 @@
   background-color: #272822;
 }
 .highlight .w {
-  color: #ffffff;
-  background-color: #272822;
-}
-.highlight {
   color: #ffffff;
   background-color: #272822;
 }
