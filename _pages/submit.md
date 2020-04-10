@@ -28,6 +28,8 @@ website: URL to the website of the tool
 ```
 ~~~
 
+Add one sentence description to `excerpt` and type the tool's website URL to `website` in the template. Then, add the Dockerfile within the triple backticks with `dockerfile` tag as shown in the place of `# Here goes the Dockerfile` in the template above.
+
 Hit the `Propose new file` button at the end of the page to create the Dockerfile. This will fork the project and create the Dockerfile in a branch in the fork. 
 
 Then see the `Comparing changes` page and hit the `Create pull request` button (and then again in the following view) to actually submit the Dockerfile to biodockerfiles.
