@@ -6,7 +6,7 @@ excerpt: SURVIVOR is a tool set for simulating/evaluating SVs, merging and compa
 website: https://github.com/fritzsedlazeck/SURVIVOR
 ---
 
-{% highlight dockerfile %}
+```dockerfile
 FROM ubuntu:16.04
 
 WORKDIR /opt
@@ -27,4 +27,4 @@ RUN make \
 WORKDIR /opt
 
 CMD ["/bin/bash"]
-{% endhighlight %}
+```
