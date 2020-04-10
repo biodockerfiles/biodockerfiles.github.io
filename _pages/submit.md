@@ -10,7 +10,7 @@ Go to [the directory in biodockerfiles GitHub repository that stores Dockerfiles
 
 Hit the `Create new file` button at the top to create a new Dockerfile under `_dockerfiles/`.
 
-Type the name of the file as `tool-version.md` in the text field. Don't forget to replace `tool` and `version`. Note that `tool` and `version` should have lowercase characters and separated by a hyphen (`-`) e.g. `samtools-1.10`.
+Type the name of the file as `tool-version.md` in the text field. Don't forget to replace `tool` and `version`. Note that `tool` and `version` should have lowercase characters and separated by a hyphen (`-`) e.g. `samtools-1.10.md`.
 
 Use the below template for our file.
 
@@ -18,7 +18,7 @@ Use the below template for our file.
 ---
 layout: default
 title: tool-version
-date: YYYY-MM-DD HH:MM:SS +/-TTTT
+date: YYYY-MM-DD HH:MM +/-TTTT
 excerpt: One sentence description of the tool
 website: URL to the website of the tool
 ---
@@ -30,7 +30,7 @@ website: URL to the website of the tool
 
 Hit the `Propose new file` button at the end of the page to create the Dockerfile. This will fork the project and create the Dockerfile in a branch in the fork. 
 
-We then see `Comparing changes` page and we hit the `Create pull request` button (and then again in the following view) to actually submit the Dockerfile to biodockerfiles.
+Then see the `Comparing changes` page and hit the `Create pull request` button (and then again in the following view) to actually submit the Dockerfile to biodockerfiles.
 
 ### Using GitHub's command-line interface
 
@@ -72,7 +72,7 @@ We will see a file as shown below.
 ---
 layout: default
 title: tool-version
-date: YYYY-MM-DD HH:MM:SS +/-TTTT
+date: YYYY-MM-DD HH:MM +/-TTTT
 excerpt: 
 website: 
 ---
@@ -94,7 +94,7 @@ So the entire content of `_dockerfiles/tool-version.md` will be as shown below.
 ---
 layout: default
 title: tool-version
-date: YYYY-MM-DD HH:MM:SS +/-TTTT
+date: YYYY-MM-DD HH:MM +/-TTTT
 excerpt: One sentence description of the tool
 website: URL to the website of the tool
 ---
