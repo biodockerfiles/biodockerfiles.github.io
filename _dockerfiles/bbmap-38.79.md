@@ -18,7 +18,7 @@ RUN apt-get update \
 WORKDIR /opt
 
 RUN wget https://sourceforge.net/projects/bbmap/files/BBMap_38.79.tar.gz/download -O BBMap_38.79.tar.gz \
-    && tar xzvf BBMap_38.79.tar.gz && \
+    && tar xzvf BBMap_38.79.tar.gz \
     && rm BBMap_38.79.tar.gz
 
 # Make all BBMap executables global
