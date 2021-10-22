@@ -14,15 +14,18 @@ RUN apt-get update \
     && apt-get install --yes --no-install-recommends \
     wget \
     build-essential \
-    gcc \
     automake \
     autoconf \
+    make \
+    gcc \
+    perl \
     zlib1g-dev \
-    libgsl0-dev \
     libbz2-dev \
-    libcurl4 \
     liblzma-dev \
+    libcurl4-gnutls-dev \
+    libssl-dev \
     libperl-dev \
+    libgsl0-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
