@@ -1,7 +1,7 @@
 ---
 layout: default
 title: autodock-vina-1.2.3
-date: 2021-12-19 19:15 +3000
+date: 2021-12-19 19:15 +0300
 excerpt: AutoDock Vina is a turnkey computational docking program that is based on a simple scoring function and rapid gradient-optimization conformational search.
 website: http://vina.scripps.edu/
 ---
